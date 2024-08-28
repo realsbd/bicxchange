@@ -180,7 +180,7 @@ class Community(SQLModel, table=True):
     id: uuid.UUID = Field(default_factory=uuid.uuid4, primary_key=True)
 
 class CommunityPublic(CommunityBase):
-    id: int
+    id: uuid.UUID
 
 class CommunitiesPublic(SQLModel):
     data: list[CommunityPublic]
