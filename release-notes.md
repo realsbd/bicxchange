@@ -2,6 +2,7 @@
 
 ## Latest Changes
 
+* removing fronted. PR [#2](https://github.com/realsbd/bicxchange/pull/2) by [@realsbd](https://github.com/realsbd).
 * community id to uuid. PR [#1](https://github.com/realsbd/bicxchange/pull/1) by [@realsbd](https://github.com/realsbd).
 
 ### Internal
