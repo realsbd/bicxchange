@@ -2,6 +2,8 @@
 
 ## Latest Changes
 
+* community id to uuid. PR [#1](https://github.com/realsbd/bicxchange/pull/1) by [@realsbd](https://github.com/realsbd).
+
 ### Internal
 
 * 👷 Update issue-manager. PR [#1288](https://github.com/fastapi/full-stack-fastapi-template/pull/1288) by [@tiangolo](https://github.com/tiangolo).
