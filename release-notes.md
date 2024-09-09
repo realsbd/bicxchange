@@ -2,6 +2,7 @@
 
 ## Latest Changes
 
+* ⬆ Bump tiangolo/issue-manager from 0.5.0 to 0.5.1. PR [#3](https://github.com/realsbd/bicxchange/pull/3) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * removing fronted. PR [#2](https://github.com/realsbd/bicxchange/pull/2) by [@realsbd](https://github.com/realsbd).
 * community id to uuid. PR [#1](https://github.com/realsbd/bicxchange/pull/1) by [@realsbd](https://github.com/realsbd).
 
