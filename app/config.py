@@ -2,6 +2,7 @@ from functools import cache
 
 from pydantic import EmailStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
+import os
 
 
 class BaseConfig(BaseSettings):
@@ -13,14 +14,14 @@ class BaseConfig(BaseSettings):
 
 class Config(BaseConfig):
     DB_URL: str = "mysql+aiomysql://root:''@localhost/bicxchange"
-    SECRET_KEY: str = "YHP4cNhbpHIWcN8cCigESXId9lK9sHfvEXySU4GbuU4"
+    SECRET_KEY: str = "O07h5iGxzRsV2xgS90hv-GxJkk57QhkmqDXN69WF5UA"
     ALGORITHM: str = "HS512"
     TOKEN_EXPIRE_SECONDS: int = 3600
     RESET_EXPIRE_SECONDS: int = 300
     TOKEN_PATH: str = "api/v1/auth/token"
     ADMIN_EMAIL: EmailStr = "admin@sample.com"
     ADMIN_PASSWORD: str = "12345678"
-    ADMIN_EMAIL_TOKEN: str = "YHP4cNhbpHIWcN8cCigESXId9lK9sHfvEXySU4GbuU4"
+    ADMIN_EMAIL_TOKEN: str = "MiJDCx3zrY_9MMjJrgGmi6ac7yllGPohzxkgmUTmrmQ"
     LOG_LEVEL: str = "DEBUG"
     RATE_LIMITS: tuple[int, int] = (10, 60)
 
