@@ -1,55 +1,46 @@
-# Full Stack FastAPI Template
+# FastAPI-Boilerplate
 
-<a href="https://github.com/fastapi/full-stack-fastapi-template/actions?query=workflow%3ATest" target="_blank"><img src="https://github.com/fastapi/full-stack-fastapi-template/workflows/Test/badge.svg" alt="Test"></a>
-<a href="https://coverage-badge.samuelcolvin.workers.dev/redirect/fastapi/full-stack-fastapi-template" target="_blank"><img src="https://coverage-badge.samuelcolvin.workers.dev/fastapi/full-stack-fastapi-template.svg" alt="Coverage"></a>
+FastAPI Starter: A simple and intuitive example repository showcasing basic functionality and best practices for building web APIs with FastAPI. Use this as a template or reference for accelerating your FastAPI projects
 
-## Technology Stack and Features
-
-- ⚡ [**FastAPI**](https://fastapi.tiangolo.com) for the Python backend API.
-    - 🧰 [SQLModel](https://sqlmodel.tiangolo.com) for the Python SQL database interactions (ORM).
-    - 🔍 [Pydantic](https://docs.pydantic.dev), used by FastAPI, for the data validation and settings management.
-    - 💾 [PostgreSQL](https://www.postgresql.org) as the SQL database.
-- 🚀 [React](https://react.dev) for the frontend.
-    - 💃 Using TypeScript, hooks, Vite, and other parts of a modern frontend stack.
-    - 🎨 [Chakra UI](https://chakra-ui.com) for the frontend components.
-    - 🤖 An automatically generated frontend client.
-    - 🧪 [Playwright](https://playwright.dev) for End-to-End testing.
-    - 🦇 Dark mode support.
-- 🐋 [Docker Compose](https://www.docker.com) for development and production.
-- 🔒 Secure password hashing by default.
-- 🔑 JWT (JSON Web Token) authentication.
-- 📫 Email based password recovery.
-- ✅ Tests with [Pytest](https://pytest.org).
-- 📞 [Traefik](https://traefik.io) as a reverse proxy / load balancer.
-- 🚢 Deployment instructions using Docker Compose, including how to set up a frontend Traefik proxy to handle automatic HTTPS certificates.
-- 🏭 CI (continuous integration) and CD (continuous deployment) based on GitHub Actions.
-
-### Configure
-
-You can then update configs in the `.env` files to customize your configurations.
-
-Before deploying it, make sure you change at least the values for:
-
-- `SECRET_KEY`
-- `FIRST_SUPERUSER_PASSWORD`
-- `POSTGRES_PASSWORD`
-
-You can (and should) pass these as environment variables from secrets.
-
-Read the [deployment.md](./deployment.md) docs for more details.
-
-### Generate Secret Keys
-
-Some environment variables in the `.env` file have a default value of `changethis`.
-
-You have to change them with a secret key, to generate secret keys you can run the following command:
+## How to get started
 
 ```bash
-python -c "import secrets; print(secrets.token_urlsafe(32))"
+python3.12 -m venv env
+source env/bin/activate
 ```
 
-Copy the content and use that as password / secret key. And run that again to generate another secure key.
+Create a .env file following the example `example.env`
 
-## License
+`app/config.py` has 3 sets of configurations: Test, Dev, and Prod.
 
-The Full Stack FastAPI Template is licensed under the terms of the MIT license.
+```bash
+touch .env
+```
+
+Run the following command to install dependencies. `runtime.txt` specifies the runtime version used.
+
+```bash
+bash reset.sh
+```
+
+## Run the app locally
+
+```bash
+python run.py
+```
+
+## Run tests.
+
+We use the `TestConfig` to run tests
+
+```bash
+bash test.sh
+```
+
+### Features
+
+- Routes / Crud.
+- Base models with database persistence and relationships.
+- Multiple configuration files.
+- User authentication, authorization, and route protection.
+- Logging
